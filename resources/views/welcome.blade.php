@@ -43,7 +43,7 @@
                     <div class="space-y-4 px-5 py-6 font-mono text-sm text-slate-200">
                         <p><span class="text-cyan-300">$</span> inisiasi proyek --fokus="web"</p>
                         <p><span class="text-cyan-300">$</span> aktifkan self-hosting --stack="docker nginx"</p>
-                        <p><span class="text-cyan-300">$</span> tunneling cloudflare --keamanan="maksimal"</p>
+                        <p><span class="text-cyan-300">$</span> jalankan cloudflare tunnel --keamanan="maksimal"</p>
                         <p class="text-emerald-300">? Sistem siap dijalankan dan siap dikembangkan lebih lanjut.</p>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
             @foreach ([
                 'Pembuatan Website',
                 'Deployment Server',
-                'Konfigurasi Cloudflare',
+                'Tunneling Cloudflare',
                 'Integrasi API',
                 'Sistem Otomatisasi',
             ] as $service)
