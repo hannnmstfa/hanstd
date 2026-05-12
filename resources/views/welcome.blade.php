@@ -89,6 +89,7 @@
                     title="Marketplace Penjualan Parfum"
                     description="Marketplace parfum dengan integrasi tracking pengiriman real-time dan tipe pembayaran online yang fleksibel untuk pengalaman belanja yang mulus."
                     badge="E-Commerce"
+                    href="https://luxuexperfume.hanstd.com/"
                 />
             </div>
             <div class="reveal-up">
@@ -103,6 +104,14 @@
                     title="Website Organisasi"
                     description="Website organisasi untuk publikasi kegiatan, profil kepengurusan, dokumentasi program, dan komunikasi informasi kepada anggota serta publik."
                     badge="Komunitas"
+                />
+            </div>
+            <div class="reveal-up">
+                <x-project-card
+                    title="Hanstd Tools"
+                    description="Web tools yang menyediakan berbagai alat praktis untuk kebutuhan sehari-hari agar pekerjaan harian lebih cepat dan efisien."
+                    badge="Web Tools"
+                    href="https://tools.hanstd.com"
                 />
             </div>
         </div>
