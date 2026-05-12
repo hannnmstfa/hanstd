@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        color-scheme: dark;
+    }
+
+    body {
+        background-image: radial-gradient(circle at 20% -5%, rgba(34, 211, 238, 0.15), transparent 35%), radial-gradient(circle at 80% -10%, rgba(139, 92, 246, 0.2), transparent 35%);
+    }
+
+    [id] {
+        scroll-margin-top: 6.5rem;
+    }
+}
+
+@layer components {
+    .site-grid-bg {
+        @apply pointer-events-none fixed inset-0 -z-20 opacity-70;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+        background-size: 42px 42px;
+        mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+    }
+
+    .glow-orb {
+        @apply pointer-events-none fixed -z-10 rounded-full blur-3xl;
+        animation: floatOrb 12s ease-in-out infinite;
+    }
+
+    .glow-orb-blue {
+        width: 22rem;
+        height: 22rem;
+        top: -6rem;
+        left: -5rem;
+        background: rgba(6, 182, 212, 0.18);
+    }
+
+    .glow-orb-violet {
+        width: 24rem;
+        height: 24rem;
+        right: -8rem;
+        top: 16rem;
+        background: rgba(99, 102, 241, 0.16);
+        animation-delay: 1.7s;
+    }
+
+    .nav-link {
+        @apply text-slate-300 transition hover:text-cyan-200;
+    }
+
+    .mobile-nav-link {
+        @apply rounded-lg px-3 py-2 transition hover:bg-white/5 hover:text-cyan-200;
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_34px_rgba(59,130,246,0.45)] transition duration-300 hover:scale-[1.02] hover:shadow-[0_18px_45px_rgba(99,102,241,0.5)];
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 backdrop-blur transition duration-300 hover:border-cyan-300/40 hover:bg-white/10 hover:text-cyan-100;
+    }
+
+    .section-eyebrow {
+        @apply text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300;
+    }
+
+    .section-title {
+        @apply font-display text-3xl leading-tight text-white sm:text-4xl;
+    }
+
+    .hero-blob {
+        @apply pointer-events-none absolute rounded-full blur-3xl;
+        animation: floatOrb 9s ease-in-out infinite;
+    }
+
+    .hero-blob-a {
+        width: 15rem;
+        height: 15rem;
+        right: 8%;
+        top: 7rem;
+        background: rgba(34, 211, 238, 0.2);
+    }
+
+    .hero-blob-b {
+        width: 18rem;
+        height: 18rem;
+        right: -1rem;
+        bottom: 3rem;
+        background: rgba(99, 102, 241, 0.22);
+        animation-delay: 2s;
+    }
+
+    .terminal-card {
+        @apply w-full max-w-xl overflow-hidden rounded-2xl border border-white/15 bg-slate-950/75 shadow-[0_25px_80px_rgba(8,47,73,0.5)] backdrop-blur-xl;
+    }
+
+    .feature-card {
+        @apply rounded-2xl border border-white/10 bg-white/5 p-6 shadow-[0_15px_45px_rgba(2,6,23,0.45)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-cyan-300/35 hover:bg-white/10;
+    }
+
+    .feature-title {
+        @apply font-display text-xl text-white;
+    }
+
+    .feature-text {
+        @apply mt-3 text-sm leading-relaxed text-slate-300;
+    }
+
+    .service-card {
+        @apply flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur transition duration-300 hover:border-violet-300/35 hover:bg-white/10;
+    }
+
+    .service-dot {
+        @apply h-2.5 w-2.5 rounded-full bg-gradient-to-r from-cyan-300 to-violet-400 shadow-[0_0_16px_rgba(34,211,238,0.8)];
+    }
+
+    .reveal-up {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 600ms ease, transform 600ms ease;
+    }
+
+    .reveal-up.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@layer utilities {
+    .font-display {
+        font-family: 'Sora', 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    }
+}
+
+@keyframes floatOrb {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-16px);
+    }
+}
