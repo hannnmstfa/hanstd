@@ -113,7 +113,6 @@
             <p class="section-eyebrow">Layanan</p>
             <h2 class="section-title mt-4">Layanan teknis end-to-end untuk kebutuhan digital modern</h2>
         </div>
-
         <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             @foreach ([
                 'Pembuatan Website',
