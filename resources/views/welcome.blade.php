@@ -144,8 +144,39 @@
             <h2 class="section-title mt-4 max-w-3xl">Punya ide produk, eksperimen cloud, atau sistem otomasi? Mari kolaborasi bersama HANSTD.</h2>
             <div class="mt-8 flex flex-wrap gap-4">
                 <a href="mailto:burhanmusthofa1@gmail.com" class="btn-primary">Kirim Email</a>
-                <a href="#hero" class="btn-secondary">Kembali ke Atas</a>
+                <a href="https://www.linkedin.com/in/hannnmstfa" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn</a>
+                <a href="https://github.com/hannnmstfa" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub</a>
             </div>
         </div>
     </section>
+
+    <a href="#hero" id="backToTopBtn" class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-slate-900 text-white shadow-[0_20px_40px_rgba(0,0,0,0.45)] opacity-0 invisible pointer-events-none transition-opacity duration-300 ease-in-out hover:-translate-y-0.5 hover:bg-slate-800" aria-label="Kembali ke atas">
+        <span class="text-2xl leading-none">↑</span>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTopBtn = document.getElementById('backToTopBtn');
+            const heroSection = document.getElementById('hero');
+            if (!backToTopBtn || !heroSection) return;
+
+            const updateButtonVisibility = () => {
+                if (window.scrollY > 200) {
+                    backToTopBtn.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
+                    backToTopBtn.classList.add('opacity-100');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                    backToTopBtn.classList.remove('opacity-100');
+                }
+            };
+
+            backToTopBtn.addEventListener('click', function (event) {
+                event.preventDefault();
+                heroSection.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            updateButtonVisibility();
+            window.addEventListener('scroll', updateButtonVisibility);
+        });
+    </script>
 @endsection
