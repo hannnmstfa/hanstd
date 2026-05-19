@@ -9,7 +9,7 @@
 
         <div class="lg:text-right">
             <p class="text-sm font-medium text-cyan-300">Dibuat oleh Om Burhan</p>
-            <p class="mt-3 text-sm text-slate-400">© {{ date('Y') }} HANSTD. Seluruh hak cipta dilindungi.</p>
+            <p class="mt-3 text-sm text-slate-400">	&copy; {{ date('Y') }} HANSTD. Seluruh hak cipta dilindungi.</p>
         </div>
     </div>
 </footer>
