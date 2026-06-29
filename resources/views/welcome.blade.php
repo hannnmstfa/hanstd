@@ -1,15 +1,12 @@
-@extends('layouts.app')
-
-@section('title', 'HANSTD | Membangun Hal Digital')
-
-@section('content')
+<x-app-layout>
     <section id="hero" class="relative overflow-hidden px-6 pb-20 pt-32 lg:px-10 lg:pt-40">
         <div class="hero-blob hero-blob-a"></div>
         <div class="hero-blob hero-blob-b"></div>
 
         <div class="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
             <div class="reveal-up">
-                <p class="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">
+                <p
+                    class="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">
                     Studio Teknologi Pribadi
                 </p>
 
@@ -25,7 +22,7 @@
 
                 <div class="mt-10 flex flex-wrap items-center gap-4">
                     <a href="#proyek" class="btn-primary">Lihat Proyek</a>
-                    <a href="#kontak" class="btn-secondary">Hubungi Saya</a>
+                    <a href="#kontak" class="btn-secondary">Diskusikan Proyek Anda</a>
                 </div>
             </div>
 
@@ -62,17 +59,20 @@
         <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <article class="feature-card reveal-up">
                 <h3 class="feature-title">Pengembangan Web</h3>
-                <p class="feature-text">Membuat website cepat, aman, dan siap skala untuk kebutuhan personal brand, bisnis, hingga platform digital.</p>
+                <p class="feature-text">Membuat website cepat, aman, dan siap skala untuk kebutuhan personal brand,
+                    bisnis, hingga platform digital.</p>
             </article>
 
             <article class="feature-card reveal-up">
                 <h3 class="feature-title">Self Hosting</h3>
-                <p class="feature-text">Menyiapkan infrastruktur mandiri yang efisien, fleksibel, dan mudah dipelihara untuk kontrol penuh atas layanan.</p>
+                <p class="feature-text">Menyiapkan infrastruktur mandiri yang efisien, fleksibel, dan mudah dipelihara
+                    untuk kontrol penuh atas layanan.</p>
             </article>
 
             <article class="feature-card reveal-up">
                 <h3 class="feature-title">Proyek Kreatif</h3>
-                <p class="feature-text">Menggabungkan software, hardware, dan otomasi menjadi eksperimen teknologi yang unik serta relevan di dunia nyata.</p>
+                <p class="feature-text">Menggabungkan software, hardware, dan otomasi menjadi eksperimen teknologi yang
+                    unik serta relevan di dunia nyata.</p>
             </article>
         </div>
     </section>
@@ -80,39 +80,39 @@
     <section id="proyek" class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <div class="reveal-up">
             <p class="section-eyebrow">Proyek Unggulan</p>
-            <h2 class="section-title mt-4">Portofolio produk yang dibangun dengan pendekatan teknis yang matang</h2>
+            <h2 class="section-title mt-4">Portofolio proyek yang dibangun dengan pendekatan teknis yang matang</h2>
         </div>
 
         <div class="mt-12 grid gap-6 lg:grid-cols-3">
             <div class="reveal-up">
-                <x-project-card
-                    title="Marketplace Penjualan Parfum"
-                    description="Marketplace parfum dengan integrasi tracking pengiriman real-time dan tipe pembayaran online yang fleksibel untuk pengalaman belanja yang mulus."
-                    badge="E-Commerce"
-                    href="https://luxuexperfume.hanstd.com/"
-                />
+                <x-project-card title="Penjualan Parfum"
+                    description="Website penjualan parfum dengan integrasi tracking pengiriman real-time dan tipe pembayaran online yang fleksibel untuk pengalaman belanja yang mulus."
+                    badge="E-Commerce" href="https://luxuexperfume.hanstd.com/" />
             </div>
             <div class="reveal-up">
-                <x-project-card
-                    title="Company Profile"
+                <x-project-card title="Company Profile"
                     description="Website company profile dengan sistem CRUD konten untuk mengelola layanan, portofolio, tim, dan informasi perusahaan secara dinamis."
-                    badge="Corporate Website"
-                />
+                    badge="Corporate Website" />
             </div>
             <div class="reveal-up">
-                <x-project-card
-                    title="Website Organisasi"
+                <x-project-card title="Website Organisasi"
                     description="Website organisasi untuk publikasi kegiatan, profil kepengurusan, dokumentasi program, dan komunikasi informasi kepada anggota serta publik."
-                    badge="Komunitas"
-                />
+                    badge="Komunitas" />
             </div>
             <div class="reveal-up">
-                <x-project-card
-                    title="Hanstd Tools"
+                <x-project-card title="Hanstd Tools"
                     description="Web tools yang menyediakan berbagai alat praktis untuk kebutuhan sehari-hari agar pekerjaan harian lebih cepat dan efisien."
-                    badge="Web Tools"
-                    href="https://tools.hanstd.com"
-                />
+                    badge="Web Tools" href="https://tools.hanstd.com" />
+            </div>
+            <div class="reveal-up">
+                <x-project-card title="POS & Manajemen Inventaris"
+                    description="Platform kasir digital untuk toko sepeda listrik dengan fitur transaksi cepat, pengelolaan stok, data pelanggan, riwayat penjualan, dan laporan bisnis secara real-time."
+                    badge="Web POS" />
+            </div>
+            <div class="reveal-up">
+                <x-project-card title="Manajemen Inventaris AC"
+                    description="Platform digital untuk mengelola data aset AC, monitoring jadwal maintenance, dokumentasi perbaikan, dan pelaporan guna meningkatkan efisiensi operasional perusahaan."
+                    badge="Inventaris" />
             </div>
         </div>
     </section>
@@ -124,28 +124,34 @@
         </div>
         <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             @foreach ([
-                'Pembuatan Website',
-                'Deployment Server',
-                'Tunneling Cloudflare',
-                'Integrasi API',
-                'Sistem Otomatisasi',
-            ] as $service)
-                <article class="service-card reveal-up">
+                    'Pembuatan Website',
+                    'Deployment Server',
+                    'Tunneling Cloudflare',
+                    'Integrasi API',
+                    'Sistem Otomatisasi',
+                ] as $service)
+                    <article class="service-card reveal-up">
                     <div class="service-dot"></div>
-                    <h3 class="text-base font-semibold text-white">{{ $service }}</h3>
-                </article>
+                        <h3 class="text-base font-semibold text-white">{{ $service }}</h3>
+
+                   </article>
             @endforeach
         </div>
-    </section>
 
+                   </section>
+    
     <section id="kontak" class="mx-auto max-w-7xl px-6 pb-24 pt-12 lg:px-10">
-        <div class="reveal-up overflow-hidden rounded-3xl border border-cyan-300/25 bg-gradient-to-r from-cyan-500/15 via-blue-500/10 to-violet-500/15 p-8 shadow-[0_20px_80px_rgba(14,116,255,0.2)] backdrop-blur-xl sm:p-10">
+               
+            <div class="reveal-up overflow-hidden rounded-3xl border border-cyan-300/25 bg-gradient-t
+          o         -r from-cyan-500/15 via-blue-500/10 to-violet-500/15 p-8 shadow-[0_20px_80px_rgba(14,116,255,0.2)] backdrop-blur-xl sm:p-10">
             <p class="section-eyebrow">Kontak</p>
             <h2 class="section-title mt-4 max-w-3xl">Punya ide produk, eksperimen cloud, atau sistem otomasi? Mari kolaborasi bersama HANSTD.</h2>
             <div class="mt-8 flex flex-wrap gap-4">
                 <a href="mailto:burhanmusthofa1@gmail.com" class="btn-primary">Kirim Email</a>
-                <a href="https://www.linkedin.com/in/hannnmstfa" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn</a>
-                <a href="https://github.com/hannnmstfa" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub</a>
+                <a href="https://www.
+   l    inkedin.com/in/hannnmstfa" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn</a>
+
+                       <a href="https://github.com/hannnmstfa" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub</a>
             </div>
         </div>
     </section>
@@ -179,4 +185,4 @@
             window.addEventListener('scroll', updateButtonVisibility);
         });
     </script>
-@endsection
+</x-app-layout>

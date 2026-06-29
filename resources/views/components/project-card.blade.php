@@ -23,13 +23,14 @@
 
     <h3 class="mt-5 font-display text-xl text-white">{{ $title }}</h3>
     <p class="mt-3 text-sm leading-relaxed text-slate-300">{{ $description }}</p>
-
-    <div class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-cyan-200 transition group-hover:text-cyan-100">
-        <span>Lihat Detail</span>
-        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8" />
-        </svg>
-    </div>
+@if ($href)
+<div class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-cyan-200 transition group-hover:text-cyan-100">
+    <span>Lihat Detail</span>
+    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8" />
+    </svg>
+</div>
+@endif
 @if ($href)
     </a>
 @else
