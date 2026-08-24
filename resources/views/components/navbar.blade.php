@@ -1,7 +1,7 @@
 <header id="navbar" class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/50 backdrop-blur-xl transition-all duration-300">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         <a href="#hero" class="group inline-flex items-center gap-3" aria-label="Beranda HANSTD">
-            <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400/70 via-blue-500/70 to-violet-500/70 text-sm font-bold text-white shadow-[0_0_30px_rgba(79,70,229,0.45)]">H</span>
+            <img src="{{ asset('assets/logo.png') }}" alt="Logo" class="w-10 border rounded-full">
             <span class="font-display text-lg tracking-[0.22em] text-slate-100 transition group-hover:text-cyan-300">HANSTD</span>
         </a>
 
